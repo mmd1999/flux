@@ -41,3 +41,5 @@ spec:
         enabled: false
       extraArgs:
         publish-status-address: "localhost"
+      nodeSelector:
+        kubernetes.io/hostname: "kind-control-plane"
