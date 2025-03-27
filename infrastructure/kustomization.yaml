@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - metrics-server.yaml
   - nginx-ingress.yaml
-  #- argocd.yaml
+  - argocd.yaml
