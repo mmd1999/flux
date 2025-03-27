@@ -32,7 +32,7 @@ spec:
   values:
     controller:
       hostPort:
-        enabled: true
+        enabled: false
       terminationGracePeriodSeconds: 0
       service:
         type: NodePort
