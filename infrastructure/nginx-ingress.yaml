@@ -41,5 +41,12 @@ spec:
         enabled: false
       extraArgs:
         publish-status-address: "localhost"
-      nodeSelector:
-        kubernetes.io/hostname: "kind-control-plane"
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - kind-control-plane
