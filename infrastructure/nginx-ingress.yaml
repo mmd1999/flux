@@ -43,7 +43,7 @@ spec:
         publish-status-address: "localhost"
       tolerations:
       - key: node-role.kubernetes.io/control-plane
-        operator: Exists
+        operator: Equal
         effect: NoSchedule
       affinity:
         nodeAffinity:
