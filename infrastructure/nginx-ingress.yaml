@@ -35,7 +35,7 @@ spec:
         enabled: true
       terminationGracePeriodSeconds: 0
       service:
-        type: "NodePort"
+        type: LoadBalancer
       watchIngressWithoutClass: true
       publishService:
         enabled: false
