@@ -37,8 +37,8 @@ spec:
       enabled: false
     server:
       params:
-        server.rootpath: '/argocd'
-        server.basehref: '/argocd'
+        # server.rootpath: '/argocd'
+        # server.basehref: '/argocd'
         server.insecure: 'true'
       # https://argo-cd.readthedocs.io/en/latest/operator-manual/ingress/#kubernetesingress-nginx
       ingress:
