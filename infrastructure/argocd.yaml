@@ -33,6 +33,8 @@ spec:
     fullnameOverride: "argocd"
     dex:
       enabled: false
+    notifications:
+      enabled: false
     server:
       ingress:
         enabled: true
