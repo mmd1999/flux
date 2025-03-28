@@ -30,10 +30,23 @@ spec:
         namespace: argocd
       interval: 12h
   values:
-    fullnameOverride: "argocd" 
+    global:
+      domain: localhost
+    fullnameOverride: "argocd"
+    dex:
+      enabled: false
+    notifications:
+      enabled: false
+    configs:
+      params:
+        server.insecure: "true"
+        server.rootpath: '/argocd'
     server:
       ingress:
         enabled: true
+        hostname: localhost
+        path: /argocd
+        pathType: ImplementationSpecific
         annotations:
-          nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-          nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+          nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+          #nginx.ingress.kubernetes.io/ssl-passthrough: "true"

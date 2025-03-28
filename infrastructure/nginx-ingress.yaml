@@ -35,10 +35,10 @@ spec:
         enabled: true
       terminationGracePeriodSeconds: 0
       service:
-        type: "NodePort"
+        enabled: false
       watchIngressWithoutClass: true
       publishService:
-        enabled: false
+        enabled: true
       extraArgs:
         publish-status-address: "localhost"
       tolerations:
