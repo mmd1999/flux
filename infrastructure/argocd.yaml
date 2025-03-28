@@ -36,8 +36,14 @@ spec:
     notifications:
       enabled: false
     server:
+      params:
+        server.rootpath: '/argocd'
+        server.basehref: '/argocd'
+      # https://argo-cd.readthedocs.io/en/latest/operator-manual/ingress/#kubernetesingress-nginx
       ingress:
         enabled: true
+        path: /argocd
         annotations:
+          nginx.ingress.kubernetes.io/rewrite-target: /
           nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
           nginx.ingress.kubernetes.io/ssl-passthrough: "true"
