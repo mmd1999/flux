@@ -42,15 +42,11 @@ spec:
         server.insecure: "true"
         server.rootpath: '/argocd'
     server:
-      # https://argo-cd.readthedocs.io/en/latest/operator-manual/ingress/#kubernetesingress-nginx
       ingress:
         enabled: true
         hostname: localhost
-        #path: /
-        #path: /argocd(/|$)(.*)
         path: /argocd
         pathType: ImplementationSpecific
         annotations:
-          #nginx.ingress.kubernetes.io/rewrite-target: /$2
           nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
-          nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+          #nginx.ingress.kubernetes.io/ssl-passthrough: "true"
