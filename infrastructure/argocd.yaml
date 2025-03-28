@@ -44,9 +44,10 @@ spec:
       ingress:
         enabled: true
         hostname: localhost
-        path: /argocd/(.*)
-        pathType: ImplementationSpecific
+        path: /
+        #path: /argocd/(.*)
+        #pathType: ImplementationSpecific
         annotations:
-          nginx.ingress.kubernetes.io/rewrite-target: /$1
+          #nginx.ingress.kubernetes.io/rewrite-target: /$1
           nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
           nginx.ingress.kubernetes.io/ssl-passthrough: "true"
