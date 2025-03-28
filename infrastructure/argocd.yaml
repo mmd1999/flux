@@ -30,7 +30,9 @@ spec:
         namespace: argocd
       interval: 12h
   values:
-    fullnameOverride: "argocd" 
+    fullnameOverride: "argocd"
+    dex:
+      enabled: false
     server:
       ingress:
         enabled: true
