@@ -30,16 +30,19 @@ spec:
         namespace: argocd
       interval: 12h
   values:
+    global:
+      domain: localhost
     fullnameOverride: "argocd"
     dex:
       enabled: false
     notifications:
       enabled: false
-    server:
+    configs:
       params:
+        server.insecure: "true"
         # server.rootpath: '/argocd'
         # server.basehref: '/argocd'
-        server.insecure: 'true'
+    server:
       # https://argo-cd.readthedocs.io/en/latest/operator-manual/ingress/#kubernetesingress-nginx
       ingress:
         enabled: true
