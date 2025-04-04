@@ -4,3 +4,4 @@ resources:
   - metrics-server.yaml
   - nginx-ingress.yaml
   - argocd.yaml
+  - k8sproxy.yaml
